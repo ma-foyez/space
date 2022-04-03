@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Russo+One&family=Work+Sans:wght@300&display=swap");
+
+/***********************************
+          CSS Variables
+************************************/
+:root {
+  /* color */
+  /* background: linear-gradient(95.79deg, #2317fa -33.63%, #d529e4 97.49%); */
+
+  /* background: linear-gradient(95.48deg, #2317fa -1.25%, #d529e4 97.48%); */
+
+  /* background: #231e44;
+  background: #1d0c41; */
+  --color-white: #ffffff;
+  --color-purple: #8C21ED;
+}
+
+/***********************************
+         Normalize CSS
+************************************/
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  background-color: #1e1b3a;
+  color: var(--color-white);
+  font-family: "Inter", sans-serif;
+  /* font-family: "Russo One", sans-serif;
+  font-family: "Work Sans", sans-serif; */
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-white) !important;
+}
+
+ul {
+  list-style-type: none;
+}
+
+svg {
+  color: var(--color-white);
+  max-height: 2.5rem;
+  cursor: pointer;
+}
+/***********************************
+         Navbar CSS
+************************************/
+
+.brand-logo img {
+  width: 130px;
+}
+
+.navbar-menu ul li a {
+  margin: 0 1rem;
+  line-height: 19px;
+  padding: 0.5rem;
+  border: 2px solid transparent;
+}
+.navbar-menu ul li a.active , .navbar-menu ul li a:hover{
+  border-image: linear-gradient(
+    45deg,
+    rgba(203, 40, 229, 1) 0%,
+    rgba(107, 30, 241, 1) 52%
+  );
+  -moz-border-image: -moz-linear-gradient(
+    45deg,
+    rgba(203, 40, 229, 1) 0%,
+    rgba(107, 30, 241, 1) 52%
+  );
+  -webkit-border-image: -webkit-linear-gradient(
+    45deg,
+    rgba(203, 40, 229, 1) 0%,
+    rgba(107, 30, 241, 1) 52%
+  );
+  -webkit-border-image-slice: 2;
+  border-image-slice: 2;
+  color: var(--color-purple)!important;
+}

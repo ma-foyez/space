@@ -4,6 +4,9 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
+//import all external css files
+import './assets/css/style.css'
+import './assets/css/responsive.css'
 
 import { Provider } from 'react-redux'
 import store from './_redux/Store'

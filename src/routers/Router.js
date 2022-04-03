@@ -8,6 +8,11 @@ const routes = [
         name: "Home Page",
         element: HomePage,
     },
+    {
+        path: "/home",
+        name: "Home Page",
+        element: HomePage,
+    },
 ];
 
 export default routes;

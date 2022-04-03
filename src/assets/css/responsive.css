@@ -1,0 +1,54 @@
+@media only screen and (max-width: 767px) {
+
+/***********************************
+         Responsive Navbar CSS
+************************************/
+  .brand-logo {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .navbar-menu.responsive ul li a {
+    width: 95%;
+    margin: 0.5rem 0px;
+    display: block;
+    padding: 0.8rem;
+    border-radius: 5px;
+    border: 2px solid transparent;
+  }
+  .navbar-menu.responsive ul li a.active,
+  .navbar-menu.responsive ul li a:hover {
+    border: 2px solid transparent;
+    border-image: linear-gradient(
+      45deg,
+      rgba(203, 40, 229, 1) 0%,
+      rgba(107, 30, 241, 1) 52%
+    );
+    -moz-border-image: -moz-linear-gradient(
+      45deg,
+      rgba(203, 40, 229, 1) 0%,
+      rgba(107, 30, 241, 1) 52%
+    );
+    -webkit-border-image: -webkit-linear-gradient(
+      45deg,
+      rgba(203, 40, 229, 1) 0%,
+      rgba(107, 30, 241, 1) 52%
+    );
+    -webkit-border-image-slice: 2;
+    border-image-slice: 2;
+  }
+
+  .responsive {
+    overflow-y: auto;
+    transition: 0.5s all;
+    height: 0;
+  }
+  .responsive.show {
+    display: block;
+    height: 300px;
+    transition: 0.5s all;
+  }
+
+  
+}
