@@ -40,7 +40,7 @@
   }
 
   .responsive {
-    overflow-y: auto;
+    overflow-y: hidden;
     transition: 0.5s all;
     height: 0;
   }

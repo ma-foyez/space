@@ -1,10 +1,11 @@
 import React from 'react';
+import HeaderBanner from '../components/headerBanner/HeaderBanner';
 import MainLayout from '../layouts/MainLayout';
 
 const HomePage = () => {
     return (
         <MainLayout title="Home">
-            <h1>Home page content</h1>
+            <HeaderBanner />
         </MainLayout>
     );
 };

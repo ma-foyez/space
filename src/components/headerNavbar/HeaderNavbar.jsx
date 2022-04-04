@@ -22,7 +22,7 @@ const HeaderNavbar = () => {
                             <li> <NavLink to="/about">About US</NavLink> </li>
                             <li> <NavLink to="/story">Story</NavLink> </li>
                             <li> <NavLink to="/Blog">Blog</NavLink> </li>
-                            <li> <NavLink to="/contact">Contact US</NavLink> </li>
+                            <li> <NavLink to="/contact" className="custom-btn" >Contact US</NavLink> </li>
                         </ul>
                     </div>
                 </div>
