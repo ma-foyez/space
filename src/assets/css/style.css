@@ -84,7 +84,6 @@ svg {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  /* background: red; */
   background: var(--linear-gradient-1);
   border-radius: 10px;
 }
@@ -131,7 +130,22 @@ svg {
 .header-banner {
   position: relative;
   background-color: #18163b;
+  background-image: url("../images/asset2.png");
+  background-size: contain;
+  background-position: right;
+  background-repeat: no-repeat;
 }
+/* .header-banner::before {
+  content: "";
+  background-image: url("../images/asset2.png");
+  background-size: 100px 100px;
+  position: absolute;
+  right: 0;
+  background-repeat: no-repeat;
+  width: 150px;
+  height: 300px;
+  display: inline-block;
+} */
 .header-content-inner {
   display: flex;
   justify-content: space-between;
@@ -148,6 +162,8 @@ svg {
   left: 0;
   bottom: 20%;
   background-repeat: no-repeat;
+  width: 150px;
+  height: 300px;
   display: inline-block;
 }
 .header-content-inner::after {
@@ -158,6 +174,8 @@ svg {
   top: 3%;
   left: -8%;
   background-repeat: no-repeat;
+  width: 150px;
+  height: 300px;
   display: inline-block;
 }
 .welcome-box-btn {
@@ -203,7 +221,6 @@ svg {
   color: var(--color-white);
   display: inline-block;
   border-radius: 5px;
-  cursor: pointer;
 }
 
 .header-content-banner {
@@ -213,15 +230,32 @@ svg {
   background-repeat: no-repeat;
 }
 
-.header-banner::before {
-  content: "";
-  background-image: url("../images/asset2.png");
-  background-size: 180px 280px;
-  position: absolute;
-  right: 0;
-  bottom: 20%;
-  background-repeat: no-repeat;
-  display: inline-block;
+/***********************************
+         Mission Section CSS
+************************************/
+.mission-card {
+  background-color: #231e44;
+  padding: 2rem;
+  text-align: center;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.mission-card img {
+  height: 120px;
+}
+
+.mission-card h4.mission-card-tilte {
+  font-family: "Russo One", sans-serif;
+  font-size: 1.87rem;
+  margin-top: 30px;
+}
+.mission-card .mission-details{
+  color: #DADADA;
+  margin-top: 25px;
+}
+.mission-card-id-02{
+  background: var(--linear-gradient-1);
 }
 /***********************************
          Footer CSS

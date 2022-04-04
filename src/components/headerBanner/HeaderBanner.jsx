@@ -1,6 +1,7 @@
 import React from 'react';
 import internetShape from "../../assets/images/internet.svg";
 import robotImg from "../../assets/images/Asset 1@8x-8 1@3x.png"
+
 const HeaderBanner = () => {
     return (
         <section id="header-banner" className='header-banner'>
@@ -22,6 +23,8 @@ const HeaderBanner = () => {
                     </div>
                 </div>
             </div>
+
+
         </section>
     );
 };
