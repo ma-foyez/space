@@ -5,14 +5,16 @@
 ************************************/
 :root {
   /* color */
-  /* background: linear-gradient(95.79deg, #2317fa -33.63%, #d529e4 97.49%); */
-
-  /* background: linear-gradient(95.48deg, #2317fa -1.25%, #d529e4 97.48%); */
-
-  /* background: #231e44;
-  background: #1d0c41; */
   --color-white: #ffffff;
   --color-purple: #8c21ed;
+
+  /*Linear gradient background*/
+  --linear-gradient-1: linear-gradient(
+    95.79deg,
+    #2317fa -33.63%,
+    #d529e4 97.49%
+  );
+  --background-color: #1e1b3a;
 }
 
 /***********************************
@@ -23,7 +25,7 @@ body {
   margin: 0;
   padding: 0;
   font-size: 16px;
-  background-color: #1e1b3a;
+  background-color: var(--background-color);
   color: var(--color-white);
   font-family: "Inter", sans-serif;
 }
@@ -51,7 +53,7 @@ svg {
 }
 
 .section-padding {
-  padding: 2rem 0 0 1rem;
+  padding: 3em 0 0 1em;
 }
 
 .custom-btn {
@@ -59,24 +61,39 @@ svg {
   outline: none;
   border: 2px solid transparent;
   color: var(--color-white) !important;
-  border-image: linear-gradient(
-    45deg,
-    rgba(203, 40, 229, 1) 0%,
-    rgba(107, 30, 241, 1) 52%
-  );
-  -moz-border-image: -moz-linear-gradient(
-    45deg,
-    rgba(203, 40, 229, 1) 0%,
-    rgba(107, 30, 241, 1) 52%
-  );
-  -webkit-border-image: -webkit-linear-gradient(
-    45deg,
-    rgba(203, 40, 229, 1) 0%,
-    rgba(107, 30, 241, 1) 52%
-  );
+  border-image: var(--linear-gradient-1);
+  -moz-border-image: -moz-var(--linear-gradient-1);
+  -webkit-border-image: -webkit-var(--linear-gradient-1);
   -webkit-border-image-slice: 2;
   border-image-slice: 2;
 }
+
+/***********************************
+         Custom Scrollbar CSS
+************************************/
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  /* background: red; */
+  background: var(--linear-gradient-1);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--linear-gradient-1);
+}
+
 /***********************************
          Navbar CSS
 ************************************/
@@ -94,26 +111,118 @@ svg {
 
 .navbar-menu ul li a.active,
 .navbar-menu ul li a:hover {
-  border-image: linear-gradient(
-    45deg,
-    rgba(203, 40, 229, 1) 0%,
-    rgba(107, 30, 241, 1) 52%
-  );
-  -moz-border-image: -moz-linear-gradient(
-    45deg,
-    rgba(203, 40, 229, 1) 0%,
-    rgba(107, 30, 241, 1) 52%
-  );
-  -webkit-border-image: -webkit-linear-gradient(
-    45deg,
-    rgba(203, 40, 229, 1) 0%,
-    rgba(107, 30, 241, 1) 52%
-  );
+  border-image: var(--linear-gradient-1);
+  -moz-border-image: -moz-var(--linear-gradient-1);
+  -webkit-border-image: -webkit-var(--linear-gradient-1);
   -webkit-border-image-slice: 2;
   border-image-slice: 2;
   color: var(--color-purple) !important;
 }
 
+.nav-sticky {
+  position: fixed;
+  width: 100%;
+  background-color: var(--background-color);
+  z-index: 9999;
+}
+/***********************************
+         Header Banner CSS
+************************************/
+.header-banner {
+  position: relative;
+  background-color: #18163b;
+}
+.header-content-inner {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.header-content-inner > div {
+  flex: 50%;
+}
+.header-banner::after {
+  content: "";
+  background-image: url("../images/Ellipse\ 1\ \(1\).png");
+  background-size: 180px 280px;
+  position: absolute;
+  left: 0;
+  bottom: 20%;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+.header-content-inner::after {
+  content: "";
+  background-image: url("../images/3\ 1\ \(2\).png");
+  background-size: 100px 100px;
+  position: absolute;
+  top: 3%;
+  left: -8%;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+.welcome-box-btn {
+  background-color: #090909;
+  padding: 0.5rem 1rem;
+  border: 0;
+  outline: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.welcome-box-btn img {
+  width: 50px;
+  display: inline-block;
+}
+
+.welcome-box-btn span {
+  background: var(--linear-gradient-1);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1.5rem;
+  margin-left: 0.8rem;
+}
+
+.header-content-title {
+  font-size: 5.16rem;
+  font-family: "Russo One", sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-top: 1rem;
+}
+.header-content-description {
+  color: #dadada;
+  font-size: 1.37rem;
+}
+.header-content-btn {
+  border: 0;
+  outline: 0;
+  background: var(--linear-gradient-1);
+  padding: 1rem 2rem;
+  color: var(--color-white);
+  display: inline-block;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.header-content-banner {
+  background-image: url("../images/Vector\ 98.png");
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
+.header-banner::before {
+  content: "";
+  background-image: url("../images/asset2.png");
+  background-size: 180px 280px;
+  position: absolute;
+  right: 0;
+  bottom: 20%;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
 /***********************************
          Footer CSS
 ************************************/

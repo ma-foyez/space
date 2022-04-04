@@ -1,47 +1,56 @@
-import React, { useState } from 'react';
-import { Container, Nav, Navbar } from 'react-bootstrap';
+import React, { useEffect, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import logo from "../../assets/images/logo@3x.png"
 const HeaderNavbar = () => {
 
     const [toggleMenu, setToggleMenu] = useState(false);
+    const [isScrolling, setIsScrolling] = useState(false);
+
+    useEffect(() => {
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+
+    const handleScroll = () => {
+        setIsScrolling(window.pageYOffset > 160);
+    };
 
     return (
-        <div className="container">
-            {/* medium to large devices navbar  */}
-            <div className="d-none d-md-block">
-                <div className="d-flex justify-content-between align-items-center">
-                    <div className="brand-logo">
-                        <Link to="/">
-                            <img src={logo} alt="Space brand logo" />
-                        </Link>
-                    </div>
-                    <div className="navbar-menu">
-                        <ul className='d-flex justify-content-between'>
-                            <li> <NavLink to="/home">Home</NavLink> </li>
-                            <li> <NavLink to="/about">About US</NavLink> </li>
-                            <li> <NavLink to="/story">Story</NavLink> </li>
-                            <li> <NavLink to="/Blog">Blog</NavLink> </li>
-                            <li> <NavLink to="/contact" className="custom-btn" >Contact US</NavLink> </li>
-                        </ul>
+        <div className={`navigation-bar ${isScrolling && "nav-sticky"}`}>
+            <div className="container">
+                {/* medium to large devices navbar  */}
+                <div className="d-none d-md-block">
+                    <div className="d-flex justify-content-between align-items-center">
+                        <div className="brand-logo">
+                            <Link to="/">
+                                <img src={logo} alt="Space brand logo" />
+                            </Link>
+                        </div>
+                        <div className="navbar-menu">
+                            <ul className='d-flex justify-content-between'>
+                                <li> <NavLink to="/home">Home</NavLink> </li>
+                                <li> <NavLink to="/about">About US</NavLink> </li>
+                                <li> <NavLink to="/story">Story</NavLink> </li>
+                                <li> <NavLink to="/Blog">Blog</NavLink> </li>
+                                <li> <NavLink to="/contact" className="custom-btn" >Contact US</NavLink> </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            {/* Small device navbar */}
-            <div className="d-block d-md-none">
-                <div className="">
+                {/* Small device navbar */}
+                <div className="d-block d-md-none">
                     <div className="brand-logo">
                         <Link to="/">
                             <img src={logo} alt="Space brand logo" />
                         </Link>
                         {
                             toggleMenu ?
-                                <svg onClick={() => setToggleMenu(!toggleMenu)} xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                <svg onClick={() => setToggleMenu(!toggleMenu)} xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
                                 </svg> :
-                                <svg onClick={() => setToggleMenu(!toggleMenu)} xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                                <svg onClick={() => setToggleMenu(!toggleMenu)} xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
                                 </svg>
                         }
                     </div>
@@ -55,8 +64,8 @@ const HeaderNavbar = () => {
                         </ul>
                     </div>
                 </div>
-            </div>
 
+            </div>
         </div>
 
     );
