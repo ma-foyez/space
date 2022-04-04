@@ -1,0 +1,1 @@
+export const GET_LUNCHES_DATA = "GET_LUNCHES_DATA"

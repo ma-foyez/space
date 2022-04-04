@@ -1,9 +1,8 @@
 import { combineReducers } from "redux";
-// import AuthReducer from "../components/authentication/_redux/AuthReducer";
+import LunchReducer from "../components/LaunchRocket/_redux/reducer/LaunchRocketReducer";
 
 const RootReducer = combineReducers({
-    // AuthReducer: AuthReducer,
-    // counter: CounterReducer,
+    LunchReducer: LunchReducer,
 })
 
 export default RootReducer;
