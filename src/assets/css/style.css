@@ -40,7 +40,6 @@ ul {
 }
 
 svg {
-  color: var(--color-white);
   max-height: 2.5rem;
   cursor: pointer;
 }
@@ -250,12 +249,88 @@ svg {
   font-size: 1.87rem;
   margin-top: 30px;
 }
-.mission-card .mission-details{
-  color: #DADADA;
+.mission-card .mission-details {
+  color: #dadada;
   margin-top: 25px;
 }
-.mission-card-id-02{
+.mission-card-id-02 {
   background: var(--linear-gradient-1);
+}
+
+/***************************************
+         Launches Rocket Section CSS
+****************************************/
+.rocket-filter-area {
+  background-color: #2d2853;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}
+
+.rocket-filter-area .css-1s2u09g-control,
+.css-1pahdxg-control,
+.rocket-filter-area input {
+  background-color: transparent !important;
+  border: 0;
+}
+
+.css-b62m3t-container {
+  margin-left: 1.5rem;
+}
+
+.rocket-filter-area input {
+  border: 1px solid #dadada;
+}
+
+.rocket-searching-box {
+  border: 1px solid #dadada;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 5px;
+}
+.rocket-searching-box > input {
+  border: 0;
+  outline: 0;
+  color: var(--color-white);
+  padding: 0.3rem;
+  padding-left: 0.5rem;
+}
+.rocket-searching-box button {
+  border: 0;
+  outline: 0;
+  background-color: #090909;
+  color: var(--color-white);
+  padding: 0.3rem 1rem;
+  border-radius: 5px;
+}
+
+/*Single Rocket Card*/
+.launching-rocket-card {
+  background-color: #1d0c41;
+  padding: 1rem;
+  border-radius: 5px;
+  margin-top: 30px;
+  min-height: 390px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.launching-rocket-card img {
+  /* height: 100px; */
+  width: 144.54px;
+}
+
+.launching-rocket-card .mission-name {
+  margin: 25px 0px;
+  font-size: 1.8rem;
+  font-family: "Russo One", sans-serif;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+
+.launching-rocket-card h4{
+  font-size: 1.1rem;
+  color: #DADADA;
 }
 /***********************************
          Footer CSS
