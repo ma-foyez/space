@@ -338,15 +338,27 @@ svg {
   color: var(--color-dark-white);
 }
 
-.css-yyypgg-MuiButtonBase-root-MuiPaginationItem-root {
+.css-1ig7bcg.Mui-disabled {
+  color: var(--color-dark-white) !important;
+  opacity: 0.4 !important;
+}
+.css-1ig7bcg.Mui-selected {
+  color: var(--color-dark-white) !important;
+  opacity: 0.4 !important;
+}
+
+.css-yyypgg-MuiButtonBase-root-MuiPaginationItem-root,
+.css-1ig7bcg , .css-16y9h98{
   color: var(--color-dark-white) !important;
   opacity: 0.4;
 }
 
-button.MuiButtonBase-root.MuiPaginationItem-root.MuiPaginationItem-sizeMedium.MuiPaginationItem-outline.MuiPaginationItem-circular.MuiPaginationItem-outlinePrimary.Mui-selected.MuiPaginationItem-page.css-yyypgg-MuiButtonBase-root-MuiPaginationItem-root {
+button.MuiButtonBase-root.MuiPaginationItem-root.MuiPaginationItem-sizeMedium.MuiPaginationItem-outline.MuiPaginationItem-circular.MuiPaginationItem-outlinePrimary.Mui-selected.MuiPaginationItem-page.css-yyypgg-MuiButtonBase-root-MuiPaginationItem-root,
+.css-1ig7bcg.Mui-selected {
   color: var(--color-white) !important;
   opacity: 1;
 }
+
 .loading-spinner p {
   margin-left: 25px;
 }

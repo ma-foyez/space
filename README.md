@@ -47,7 +47,7 @@ http://localhost:3000
 - [x] NPM Packages
   - [ ] axios
   - [ ] react-select
-- [x] Heroku (For Deploy);
+- [x] Netlify (For Deploy);
 
 --- 
 ## Functionality

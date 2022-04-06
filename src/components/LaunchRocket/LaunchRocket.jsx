@@ -9,9 +9,9 @@ const LaunchRocket = () => {
 
     const [currentPage, setCurrentPage] = useState(1)
     const [showPerPage, setShowPerPage] = useState(8);
-    const [upcoming, setUpcoming] = useState(false);
-    const [launchYear, setLaunchYear] = useState("")
-    const [search, setSearch] = useState("");
+    const [upcoming, setUpcoming]       = useState(false);
+    const [launchYear, setLaunchYear]   = useState("")
+    const [search, setSearch]           = useState("");
 
     const dispatch = useDispatch();
     const { launchesData, isLoading, message } = useSelector((state) => state.LunchReducer);
@@ -21,9 +21,9 @@ const LaunchRocket = () => {
     }, [upcoming, launchYear, search, dispatch])
 
     //get current launches data
-    const indexOfLastRockets = currentPage * showPerPage;
+    const indexOfLastRockets  = currentPage * showPerPage;
     const indexOfFirstRockets = indexOfLastRockets - showPerPage;
-    const currentRocketsData = launchesData.slice(indexOfFirstRockets, indexOfLastRockets);
+    const currentRocketsData  = launchesData.slice(indexOfFirstRockets, indexOfLastRockets);
 
     const count = launchesData.length >= showPerPage ? launchesData.length / 8 : 1;
 
@@ -31,12 +31,12 @@ const LaunchRocket = () => {
         <div className="container section-padding text-center">
             {/* filtered rockets different way */}
             <LaunchRocketFilter
-                upcoming={upcoming}
-                setUpcoming={setUpcoming}
-                launchYear={launchYear}
-                setLaunchYear={setLaunchYear}
-                search={search}
-                setSearch={setSearch}
+                upcoming      = {upcoming}
+                setUpcoming   = {setUpcoming}
+                launchYear    = {launchYear}
+                setLaunchYear = {setLaunchYear}
+                search        = {search}
+                setSearch     = {setSearch}
             />
             <div className="row">
                 {
@@ -76,11 +76,11 @@ const LaunchRocket = () => {
             {launchesData && launchesData.length > 0 && (
                 <div className="pagination-section d-flex justify-content-center mt-5">
                     <Pagination
-                        count={parseInt(count)}
-                        color="primary"
-                        variant="outline"
-                        defaultPage={currentPage}
-                        onChange={(event, value) => setCurrentPage(value)}
+                        count       = {parseInt(count)}
+                        color       = "primary"
+                        variant     = "outline"
+                        defaultPage = {currentPage}
+                        onChange    = {(event, value) => setCurrentPage(value)}
                         showFirstButton
                         showLastButton
                     />
