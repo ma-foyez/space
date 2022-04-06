@@ -1,10 +1,12 @@
 @media only screen and (max-width: 767px) {
+  html,
+  body {
+    font-size: 10px;
+  }
+ 
+  /**********************  Navigation Menu Responsive CSS ***************************/
 
-/***********************************
-         Responsive Navbar CSS
-************************************/
   .brand-logo {
-    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -20,21 +22,7 @@
   .navbar-menu.responsive ul li a.active,
   .navbar-menu.responsive ul li a:hover {
     border: 2px solid transparent;
-    border-image: linear-gradient(
-      45deg,
-      rgba(203, 40, 229, 1) 0%,
-      rgba(107, 30, 241, 1) 52%
-    );
-    -moz-border-image: -moz-linear-gradient(
-      45deg,
-      rgba(203, 40, 229, 1) 0%,
-      rgba(107, 30, 241, 1) 52%
-    );
-    -webkit-border-image: -webkit-linear-gradient(
-      45deg,
-      rgba(203, 40, 229, 1) 0%,
-      rgba(107, 30, 241, 1) 52%
-    );
+    border-image: var(--linear-gradient-1);
     -webkit-border-image-slice: 2;
     border-image-slice: 2;
   }
@@ -50,5 +38,107 @@
     transition: 0.5s all;
   }
 
-  
+  /**********************  Header Banner Mobile Responsive CSS ***************************/
+  .welcome-box-btn img {
+    width: 40px;
+  }
+
+  .header-banner::before {
+    background-size: 140px 250px;
+    bottom: 5%;
+    width: 140px;
+    height: 250px;
+  }
+  .header-content-inner::before {
+    background-size: 80px 80px;
+    left: -17%;
+    width: 80px;
+    height: 80px;
+  }
+
+  .header-content-title {
+    font-size: 3.5rem;
+  }
+
+  .header-content-description {
+    font-size: 1.2rem;
+  }
+
+  /**********************  Launches Rocket Section Responsive CSS ***************************/
+
+  .filtered-option {
+    width: 50%;
+  }
+  .filtered-option:nth-child(2) {
+    justify-content: end;
+  }
+  .filtered-option:last-child {
+    width: 100%;
+  }
+  .launching-rocket-card {
+    min-height: 260px;
+  }
+
+  .launching-rocket-card img {
+    width: 90px;
+  }
+
+  .rocket-searching-box {
+    margin: 0.5rem 0;
+  }
+}
+
+/*********************For Mobile Devices**************************/
+@media only screen and (max-width: 414px) {
+  /**********************  Header Banner Mobile Responsive CSS ***************************/
+  .rocket-filter-area {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+
+  .header-banner::before,
+  .header-content-inner::before {
+    display: none;
+  }
+
+  .header-content-inner {
+    flex-direction: column-reverse;
+  }
+  .header-content-banner {
+    text-align: center;
+  }
+  .header-content-inner img {
+    max-height: 300px;
+  }
+  .header-banner {
+    background-size: 300px;
+  }
+
+  /**********************  Launches Rocket Section Responsive CSS ***************************/
+  .filtered-option {
+    width: 100%;
+    justify-content: space-between !important;
+  }
+  .css-b62m3t-container {
+    width: 60%;
+  }
+
+  .launching-rocket-card {
+    min-height: 270px;
+  }
+
+  .launching-rocket-card img {
+    width: 90px;
+  }
+
+  /**********************  Footer Section Responsive CSS ***************************/
+
+  .footer-bottom {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .social {
+    width: 100% !important;
+    justify-content: center;
+  }
 }

@@ -1,9 +1,9 @@
 import * as Types from "../types/Types";
 
 const initialState = {
-    isLoading: false,
-    launchesData: [],
-    message: ""
+    isLoading      : false,
+    launchesData   : [],
+    message        : ""
 };
 
 const LunchReducer = (state = initialState, action) => {
@@ -11,9 +11,9 @@ const LunchReducer = (state = initialState, action) => {
         case Types.GET_LUNCHES_DATA:
             return {
                 ...state,
-                isLoading: action.payload.isLoading,
+                isLoading   : action.payload.isLoading,
                 launchesData: action.payload.data,
-                message: action.payload.message
+                message     : action.payload.message
             };
 
         default:

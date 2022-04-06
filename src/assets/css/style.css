@@ -53,7 +53,8 @@ svg {
 }
 
 .section-padding {
-  padding: 3em 0 0 1em;
+  padding-top: 3rem;
+  padding-bottom: 1rem;
 }
 
 .custom-btn {
@@ -138,20 +139,10 @@ svg {
   background-color: #18163b;
   background-image: url("../images/asset2.png");
   background-size: contain;
-  background-position: right;
+  background-position: top right;
   background-repeat: no-repeat;
 }
-/* .header-banner::before {
-  content: "";
-  background-image: url("../images/asset2.png");
-  background-size: 100px 100px;
-  position: absolute;
-  right: 0;
-  background-repeat: no-repeat;
-  width: 150px;
-  height: 300px;
-  display: inline-block;
-} */
+
 .header-content-inner {
   display: flex;
   justify-content: space-between;
@@ -160,7 +151,7 @@ svg {
 .header-content-inner > div {
   flex: 50%;
 }
-.header-banner::after {
+.header-banner::before {
   content: "";
   background-image: url("../images/Ellipse\ 1\ \(1\).png");
   background-size: 180px 280px;
@@ -172,7 +163,7 @@ svg {
   height: 300px;
   display: inline-block;
 }
-.header-content-inner::after {
+.header-content-inner::before {
   content: "";
   background-image: url("../images/3\ 1\ \(2\).png");
   background-size: 100px 100px;
@@ -273,6 +264,7 @@ svg {
   border-radius: 5px;
 }
 
+
 .rocket-filter-area .css-1s2u09g-control,
 .css-1pahdxg-control,
 .rocket-filter-area input {
@@ -352,6 +344,7 @@ button.MuiButtonBase-root.MuiPaginationItem-root.MuiPaginationItem-sizeMedium.Mu
 .loading-spinner p{
   margin-left: 25px;
 }
+
 /***********************************
          Footer CSS
 ************************************/
@@ -373,6 +366,11 @@ button.MuiButtonBase-root.MuiPaginationItem-root.MuiPaginationItem-sizeMedium.Mu
   padding: 0.5rem 1.2rem;
 }
 
+.footer-bottom{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .copy-right-text {
   color: #6e7c9d;
   font-size: 1.2rem;

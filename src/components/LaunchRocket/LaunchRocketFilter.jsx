@@ -9,17 +9,17 @@ const LaunchRocketFilter = ({ upcoming, setUpcoming, launchYear, setLaunchYear, 
     const dispatch = useDispatch();
 
     const IsUpcoming = [
-        { value: true, label: 'Yes' },
-        { value: false, label: 'No' },
+        { value      : true, label : 'Yes' },
+        { value      : false, label: 'No' },
     ];
     const launchingYear = [
-        { value: '1800 - 1990', label: '1990' },
+        { value: '1800 - 1990', label: 'Less than 1990' },
         { value: '1991 - 1995', label: '1991 - 1995' },
         { value: '1996 - 2000', label: '1996 - 2000' },
         { value: '2001 - 2005', label: '2001 - 2005' },
         { value: '2006 - 2010', label: '2006 - 2010' },
         { value: '2011 - 2015', label: '2011 - 2015' },
-        { value: `2020 - ${new Date().getFullYear()}`, label: `2020 - ${new Date().getFullYear()}` },
+        { value: `2020 - ${new Date().getFullYear()}`, label: `Grater than 2020` },
     ]
 
     const styles = {
@@ -47,12 +47,12 @@ const LaunchRocketFilter = ({ upcoming, setUpcoming, launchYear, setLaunchYear, 
 
     return (
         <Row className='align-items-center rocket-filter-area'>
-            <Col xl={4} md={4} xs={10} className="d-flex align-items-center filtered-option">
+            <Col md={4} xs={12} className="d-flex align-items-center filtered-option">
                 <label htmlFor="">Is upcoming?</label>
                 <Select
                     className="basic-single ml-3"
                     styles={styles}
-                    defaultValue={IsUpcoming[0]}
+                    // defaultValue={IsUpcoming[0]}
                     isDisabled={false}
                     isLoading={false}
                     isRtl={false}
@@ -66,12 +66,12 @@ const LaunchRocketFilter = ({ upcoming, setUpcoming, launchYear, setLaunchYear, 
                 />
             </Col>
 
-            <Col xl={4} md={4} xs={10} className="d-flex align-items-center filtered-option">
+            <Col md={4} xs={12} className="d-flex align-items-center filtered-option">
                 <label htmlFor="">Launch year?</label>
                 <Select
                     className="basic-single ml-3"
                     styles={styles}
-                    defaultValue={launchingYear[0]}
+                    // defaultValue={launchingYear[0]}
                     isSearchable={true}
                     name="color"
                     options={launchingYear}
@@ -82,7 +82,7 @@ const LaunchRocketFilter = ({ upcoming, setUpcoming, launchYear, setLaunchYear, 
                 />
             </Col>
 
-            <Col xl={4} md={4} xs={10}>
+            <Col md={4} xs={12}>
                 <div className="rocket-searching-box">
                     <input
                         type="text"
