@@ -12,7 +12,7 @@ const HeaderNavbar = () => {
     }, []);
 
     const handleScroll = () => {
-        setIsScrolling(window.pageYOffset > 160);
+        setIsScrolling(window.pageYOffset > 150);
     };
 
     return (
@@ -28,7 +28,7 @@ const HeaderNavbar = () => {
                         </div>
                         <div className="navbar-menu">
                             <ul className='d-flex justify-content-between'>
-                                <li> <NavLink to="/home">Home</NavLink> </li>
+                                <li> <NavLink to="/">Home</NavLink> </li>
                                 <li> <NavLink to="/about">About US</NavLink> </li>
                                 <li> <NavLink to="/story">Story</NavLink> </li>
                                 <li> <NavLink to="/Blog">Blog</NavLink> </li>

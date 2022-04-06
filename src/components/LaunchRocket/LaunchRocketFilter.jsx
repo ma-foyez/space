@@ -12,6 +12,7 @@ const LaunchRocketFilter = ({ upcoming, setUpcoming, launchYear, setLaunchYear, 
         { value      : true, label : 'Yes' },
         { value      : false, label: 'No' },
     ];
+    
     const launchingYear = [
         { value: '1800 - 1990', label: 'Less than 1990' },
         { value: '1991 - 1995', label: '1991 - 1995' },
@@ -52,7 +53,6 @@ const LaunchRocketFilter = ({ upcoming, setUpcoming, launchYear, setLaunchYear, 
                 <Select
                     className="basic-single ml-3"
                     styles={styles}
-                    // defaultValue={IsUpcoming[0]}
                     isDisabled={false}
                     isLoading={false}
                     isRtl={false}
@@ -71,7 +71,6 @@ const LaunchRocketFilter = ({ upcoming, setUpcoming, launchYear, setLaunchYear, 
                 <Select
                     className="basic-single ml-3"
                     styles={styles}
-                    // defaultValue={launchingYear[0]}
                     isSearchable={true}
                     name="color"
                     options={launchingYear}

@@ -2,8 +2,17 @@ import React from 'react';
 import Footer from '../components/footer/Footer';
 import HeaderNavbar from '../components/headerNavbar/HeaderNavbar';
 
-const MainLayout = ({ children, title, description }) => {
-    document.title = (title !== null && title !== undefined) ? `${title} || Space` : `Space`
+/**
+ * Page Layout
+ * @param {string} title ex: Page title 
+ * @param {jsx} children  
+ * @returns MainLayout
+ */
+
+const MainLayout = ({ children, title }) => {
+
+    document.title = (title !== null && title !== undefined) ? `${title} || Space` : `Space`;
+
     return (
         <React.Fragment>
             <HeaderNavbar />
