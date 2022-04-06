@@ -1,6 +1,6 @@
 import React from 'react';
 import internetShape from "../../assets/images/internet.svg";
-import robotImg from "../../assets/images/Asset 1@8x-8 1@3x.png"
+import robotImg from "../../assets/images/Asset 1@8x-81@3x.png"
 
 const HeaderBanner = () => {
     return (

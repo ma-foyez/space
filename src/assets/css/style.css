@@ -32,6 +32,7 @@ body {
   background-color: var(--background-color);
   color: var(--color-white);
   font-family: "Inter", sans-serif;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -356,7 +357,7 @@ svg {
 button.MuiButtonBase-root.MuiPaginationItem-root.MuiPaginationItem-sizeMedium.MuiPaginationItem-outline.MuiPaginationItem-circular.MuiPaginationItem-outlinePrimary.Mui-selected.MuiPaginationItem-page.css-yyypgg-MuiButtonBase-root-MuiPaginationItem-root,
 .css-1ig7bcg.Mui-selected {
   color: var(--color-white) !important;
-  opacity: 1;
+  opacity: 1!important;
 }
 
 .loading-spinner p {

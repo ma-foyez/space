@@ -9,7 +9,7 @@ const HeaderNavbar = () => {
     useEffect(() => {
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
-    }, []);
+    }, [isScrolling]);
 
     const handleScroll = () => {
         setIsScrolling(window.pageYOffset > 150);
