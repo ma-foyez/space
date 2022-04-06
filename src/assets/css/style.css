@@ -7,6 +7,7 @@
   /* color */
   --color-white: #ffffff;
   --color-purple: #8c21ed;
+  --color-dark-white: #dadada;
 
   /*Linear gradient background*/
   --linear-gradient-1: linear-gradient(
@@ -67,6 +68,12 @@ svg {
   border-image-slice: 2;
 }
 
+.custom-alert{
+  background-color: #2d2853;
+  color: var(--color-dark-white);
+  opacity: 0.5;
+  margin: 30px;
+}
 /***********************************
          Custom Scrollbar CSS
 ************************************/
@@ -209,7 +216,7 @@ svg {
   margin-top: 1rem;
 }
 .header-content-description {
-  color: #dadada;
+  color: var(--color-dark-white);
   font-size: 1.37rem;
 }
 .header-content-btn {
@@ -250,7 +257,7 @@ svg {
   margin-top: 30px;
 }
 .mission-card .mission-details {
-  color: #dadada;
+  color: var(--color-dark-white);
   margin-top: 25px;
 }
 .mission-card-id-02 {
@@ -278,11 +285,11 @@ svg {
 }
 
 .rocket-filter-area input {
-  border: 1px solid #dadada;
+  border: 1px solid var(--color-dark-white);
 }
 
 .rocket-searching-box {
-  border: 1px solid #dadada;
+  border: 1px solid var(--color-dark-white);
   display: flex;
   justify-content: space-between;
   border-radius: 5px;
@@ -328,9 +335,22 @@ svg {
   text-transform: capitalize;
 }
 
-.launching-rocket-card h4{
+.launching-rocket-card h4 {
   font-size: 1.1rem;
-  color: #DADADA;
+  color: var(--color-dark-white);
+}
+
+.css-yyypgg-MuiButtonBase-root-MuiPaginationItem-root {
+  color: var(--color-dark-white) !important;
+  opacity: 0.4;
+}
+
+button.MuiButtonBase-root.MuiPaginationItem-root.MuiPaginationItem-sizeMedium.MuiPaginationItem-outline.MuiPaginationItem-circular.MuiPaginationItem-outlinePrimary.Mui-selected.MuiPaginationItem-page.css-yyypgg-MuiButtonBase-root-MuiPaginationItem-root {
+  color: var(--color-white) !important;
+  opacity: 1;
+}
+.loading-spinner p{
+  margin-left: 25px;
 }
 /***********************************
          Footer CSS

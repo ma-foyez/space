@@ -6,14 +6,9 @@ import { getLaunchesData } from './_redux/Action/LaunchRocketAction';
 import { useForm } from "react-hook-form";
 
 
-const LaunchRocketFilter = ({ currentPage, showPerPage }) => {
+const LaunchRocketFilter = ({ upcoming, setUpcoming, launchYear, setLaunchYear, search, setSearch }) => {
 
     const dispatch = useDispatch();
-    const [upcoming, setUpcoming] = useState(false);
-    const [launchYear, setLaunchYear] = useState("")
-    const [search, setSearch] = useState("");
-
-    const { register, setValue } = useForm();
 
     const IsUpcoming = [
         { value: true, label: 'Yes' },
@@ -48,7 +43,7 @@ const LaunchRocketFilter = ({ currentPage, showPerPage }) => {
     };
 
     const searchByRocketName = () => {
-        dispatch(getLaunchesData(upcoming, launchYear, search, currentPage, showPerPage));
+        dispatch(getLaunchesData(upcoming, launchYear, search));
     };
 
 
@@ -70,7 +65,6 @@ const LaunchRocketFilter = ({ currentPage, showPerPage }) => {
                         setUpcoming(option.value);
                         dispatch(getLaunchesData(upcoming, launchYear, search));
                     }}
-                    setValue={setValue}
                 />
             </Col>
 
@@ -87,7 +81,6 @@ const LaunchRocketFilter = ({ currentPage, showPerPage }) => {
                         setLaunchYear(option.value);
                         dispatch(getLaunchesData(upcoming, launchYear, search));
                     }}
-                    setValue={setValue}
                 />
             </Col>
 
@@ -97,7 +90,6 @@ const LaunchRocketFilter = ({ currentPage, showPerPage }) => {
                         type="text"
                         placeholder='Search for rocket'
                         onChange={(e) => setSearch(e.target.value)}
-                    // onChange={(e) => searchByRocketName(e.target.value)}
                     />
                     <button onClick={() => searchByRocketName()}>Search</button>
                 </div>

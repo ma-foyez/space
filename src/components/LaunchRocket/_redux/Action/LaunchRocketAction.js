@@ -17,26 +17,27 @@ export const getLaunchesData = (upcoming, launchYear, searchText) => async (disp
         message: "",
         data: []
     }
+
     dispatch({ type: Types.GET_LUNCHES_DATA, payload: responseData });
 
     let url = "https://api.spacexdata.com/v3/launches";
 
     // filter by upcoming status
-    if (upcoming === true) {
+    if (upcoming == true) {
         url += `/upcoming`;
     } else {
         url = "https://api.spacexdata.com/v3/launches";
     }
 
     //filter by launch years between start & end
-    if (launchYear !== null) {
+    if (launchYear !== null && launchYear !== "") {
         const separateYear = launchYear.split(' ');
-        url += `?start=${separateYear[0]}&end=${separateYear[2]}`;
+        url = `https://api.spacexdata.com/v3/launches?start=${separateYear[0]}&end=${separateYear[2]}`;
     }
 
     //search by rocket name
     if (searchText !== null && searchText !== "undefined" && searchText !== "") {
-        url += `?rocket_name=${searchText}`;
+        url = `https://api.spacexdata.com/v3/launches?rocket_name=${searchText}`;
     }
 
     await Axios.get(url)
@@ -45,13 +46,15 @@ export const getLaunchesData = (upcoming, launchYear, searchText) => async (disp
                 responseData.data = res.data;
                 responseData.status = true;
                 responseData.isLoading = false;
+                if (responseData.data.length === 0) {
+                    responseData.message = "Data not found...!"
+                }
                 dispatch({ type: Types.GET_LUNCHES_DATA, payload: responseData });
-
             }
         })
         .catch((err) => {
             responseData.isLoading = false;
-            responseData.message = "Something went wrong, please check your internet!"
+            responseData.message = "Something went wrong, please check your internet connection!"
             dispatch({ type: Types.GET_LUNCHES_DATA, payload: responseData });
 
         })
