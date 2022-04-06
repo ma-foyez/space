@@ -1,10 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Col, Row } from 'react-bootstrap';
 import { useDispatch } from 'react-redux';
 import Select from 'react-select';
 import { getLaunchesData } from './_redux/Action/LaunchRocketAction';
-import { useForm } from "react-hook-form";
-
 
 const LaunchRocketFilter = ({ upcoming, setUpcoming, launchYear, setLaunchYear, search, setSearch }) => {
 
