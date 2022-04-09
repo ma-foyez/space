@@ -1,22 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React, {useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import logo from "../../assets/images/logo@3x.png"
 const HeaderNavbar = () => {
 
     const [toggleMenu, setToggleMenu] = useState(false);
-    const [isScrolling, setIsScrolling] = useState(false);
-
-    useEffect(() => {
-        window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll);
-    }, [isScrolling]);
-
-    const handleScroll = () => {
-        setIsScrolling(window.pageYOffset > 150);
-    };
 
     return (
-        <div className={`navigation-bar ${isScrolling && "nav-sticky"}`}>
+        <div className="navigation-bar nav-sticky">
             <div className="container">
                 {/* medium to large devices navbar  */}
                 <div className="d-none d-md-block">
